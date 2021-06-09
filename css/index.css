@@ -1,0 +1,714 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.nav_block {
+    display: flex;
+    background-color: black;
+}
+
+.nav {
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.nav a {
+    color: white;
+}
+
+.nav a:hover {
+    color: orange;
+}
+
+.nav_logo {
+    flex-grow: 10%;
+}
+
+.nav_logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nav_bar {
+    display: flex;
+    flex-grow: 40%;
+}
+
+.nav_bar li {
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 0 20px;
+}
+
+.nav_bar li:first-child>a {
+    color: orange;
+}
+
+.nav_service_bar {
+    display: flex;
+    flex-grow: 35%;
+}
+
+.nav_service_bar li:nth-child(-n+4) {
+    position: relative;
+    color: rgba(245, 245, 245, 0.918);
+    flex-grow: 1;
+    font-size: 12px;
+    padding: 0 14px;
+    text-indent: 5px;
+}
+
+.nav_service_bar li span {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/playsprites.png);
+    background-repeat: no-repeat;
+    background-position: -230px -26px;
+}
+
+.nav_service_bar li:nth-child(n+5) {
+    font-size: 15px;
+    text-indent: 6px;
+}
+
+.nav_service_bar li:last-child {
+    font-size: 25px;
+    font-weight: 100;
+    margin-top: 5px;
+    transform: rotate(-90deg);
+}
+
+.nav_search {
+    position: relative;
+    flex-grow: 15%;
+    width: 180px;
+    height: 25px;
+    margin-top: 12px;
+    background-image: url(../images/search.png);
+}
+
+#search_txt {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 145px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: white;
+}
+
+.main_block {
+    width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.main_block>div {
+    float: left;
+}
+
+.lyric_block {
+    width: 700px;
+    height: 100%;
+    text-align: center;
+}
+
+.song_title_block {
+    overflow: hidden;
+    height: 180px;
+    width: 700px;
+    border-bottom: 1px solid#ccc;
+}
+
+.lyric_block h2 {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 80px;
+    margin-top: 40px;
+}
+
+.song_information {
+    font-size: 15px;
+}
+
+.song_information>span {
+    display: inline-block;
+    padding: 0 20px 0 0;
+    color: orange;
+}
+
+.song_information>span:last-child i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-right: 5px;
+    background-image: url(../images/commentsprites.png);
+    background-position: -80px -40px;
+}
+
+.song_information>span:last-child i:hover {
+    background-position: -80px -60px;
+}
+
+.song_upload {
+    line-height: 3em;
+    font-size: 12px;
+}
+
+.lyric_words_block {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+}
+
+.lyric_words_block li {
+    line-height: 2.4em;
+    font-size: 16px;
+}
+
+.lyric_words_block li:nth-child(5) {
+    color: orange;
+}
+
+.words_process {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 120px;
+    margin-top: 100px;
+    background-color: #ccc;
+    opacity: .5;
+    border-radius: 10px;
+}
+
+.disc_play_block {
+    width: 500px;
+    height: 100%;
+}
+
+.disc_block {
+    position: relative;
+    padding-top: 40px;
+    height: 300px;
+}
+
+.disc_outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    animation: discRotate linear 10s infinite;
+}
+
+@keyframes discRotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.disc_bg {
+    overflow: hidden;
+    width: 96%;
+    height: 96%;
+    margin-top: 2%;
+    margin-left: 2%;
+    border-radius: 50%;
+    background-image: url(../images/disc_bg_1.jpg);
+    background-size: 100%;
+}
+
+.disc_inside,
+.disc_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    opacity: 0.4;
+}
+
+.disc_inner {
+    width: 5%;
+    height: 5%;
+    opacity: 0.8;
+}
+
+.music_play_block {
+    height: 100px;
+}
+
+.music_play_block>div {
+    float: left;
+}
+
+.music_btn {
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    margin-top: 30px;
+    background-image: url(../images/playsprites.png);
+}
+
+.prev_btn {
+    background-position: -74px -112px;
+}
+
+.prev_btn:hover {
+    background-position: -74px -151px;
+}
+
+.play_btn {
+    background-position: -137px -113px;
+}
+
+#music_audio {
+    display: none;
+}
+
+.next_btn {
+    background-position: -202px -112px;
+}
+
+.next_btn:hover {
+    background-position: -202px -152px;
+}
+
+.prograssContent {
+    margin-left: 5px;
+    width: 250px;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.prograssBar {
+    position: relative;
+    margin-top: 48px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #ccc;
+}
+
+.prograssLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    border-radius: 2px;
+    background-color: orange;
+}
+
+.prograssDot {
+    position: absolute;
+    top: -4px;
+    left: 0px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.music_current_time {
+    margin-top: 38px;
+    margin-left: 10px;
+    padding-right: 5px;
+    color: #ccc;
+}
+
+.mute_btn {
+    margin-left: 5px;
+    margin-top: 38px;
+    width: 22px;
+    height: 18px;
+    background-position: -262px -111px;
+}
+
+.mode_btn {
+    width: 30px;
+    height: 30px;
+    background-position: -15px -165px;
+}
+
+.download_btn {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    margin-left: 150px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 60px;
+    color: #fff;
+    box-sizing: border-box;
+    background: linear-gradient( 90deg, #03a9f4, #ffeb3b, #03a9f4, #ffeb3b, #03a9f4);
+    border-radius: 30px;
+    background-size: 400%;
+}
+
+.download_btn:hover {
+    animation: animate 8s linear infinite alternate;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
+.download_btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    background: linear-gradient( 90deg, #03a9f4, #ffeb3b, #03a9f4, #ffeb3b, #03a9f4);
+    border-radius: 30px;
+    background-size: 400%;
+    filter: blur(20px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.download_btn:hover::before {
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+
+.download_btn span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/playsprites.png);
+    overflow: hidden;
+    background-position: -238px -135px;
+}
+
+.user_nowTitle_block {
+    margin-top: 20px;
+    height: 60px;
+    width: 360px;
+    margin-left: 35px;
+}
+
+.user_nowTitle_block>div {
+    float: left;
+}
+
+.user_profile_picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url(../images/user_profile_picture.jpg);
+    background-size: 100%;
+}
+
+.username_title_block {
+    position: relative;
+    margin-left: 20px;
+    width: 280px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.username_title_block::after {
+    position: absolute;
+    top: 25px;
+    left: -10px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 10px solid rgba(255, 255, 255, .3);
+    border-bottom: 5px solid transparent;
+}
+
+.username_title_block h4 {
+    line-height: 30px;
+    color: gray;
+    font-size: 15px;
+    font-weight: normal;
+    text-indent: 20px;
+}
+
+.username_title_block h4:last-child {
+    color: rgb(97, 117, 184);
+}
+
+.username_title_block h4:last-child span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/playsprites.png);
+    background-position: -105px 0;
+}
+
+.username_title_block h4:last-child a {
+    float: right;
+    margin-right: 10px;
+}
+
+.comment_outer_block {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.comment_block {
+    width: 800px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.comment_block h4 {
+    line-height: 40px;
+    font-size: 18px;
+    text-indent: 20px;
+    font-weight: normal;
+    border-bottom: 2px solid #ccc;
+}
+
+.comment_block h4 span {
+    font-size: 12px;
+}
+
+.comment_user_picture {
+    float: left;
+    margin-top: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/user_profile_picture.jpg);
+    background-size: 100%;
+}
+
+.comment_right_block {
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 720px;
+    height: 200px;
+}
+
+#user_comment_textarea {
+    width: 100%;
+    height: 150px;
+    outline: none;
+    resize: none;
+    font-size: 18px;
+    line-height: 2em;
+    text-indent: 10px;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.emoji_submit_btn_block {
+    position: relative;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.comment_emoji {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../images/emoji.png);
+    background-position: 0 -115px;
+}
+
+.comment_words {
+    position: absolute;
+    top: 0;
+    right: 120px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+#comment_submit_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    border: 0;
+    line-height: 40px;
+    background-color: orange;
+    color: white;
+}
+
+#comment_submit_btn:hover {
+    cursor: pointer;
+}
+
+.great_comments_block {
+    border-top: 2px solid #ccc;
+}
+
+.great_comments_block li {
+    padding-top: 20px;
+    overflow: hidden;
+    border-bottom: 2px dotted #ccc;
+}
+
+.great_comments_title {
+    line-height: 60px;
+    text-indent: 20px;
+    font-size: 18px;
+}
+
+.great_comments_block li>div {
+    float: left;
+}
+
+.great_comments_user_picture {
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/other_users_comments_picture.jpg);
+    background-size: 100%;
+}
+
+.great_comments_host_picture {
+    background-image: url(../images/user_profile_picture.jpg);
+}
+
+.li_comments_right_block {
+    position: relative;
+    width: 720px;
+    margin-left: 20px;
+}
+
+.li_comments_right_block h1 {
+    font-size: 16px;
+    color: orange;
+    font-weight: normal;
+}
+
+.li_comments_right_block h1 span {
+    float: right;
+    content: "分享";
+    color: black;
+    font-size: 12px;
+    line-height: 1.8em;
+}
+
+.li_comments_right_block h2 {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 25px;
+    padding: 10px 0;
+}
+
+.li_comments_right_block h3 {
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1.6em;
+}
+
+.li_comments_right_block h3 span {
+    float: right;
+    content: "回复";
+    font-size: 15px;
+}
+
+.thumbs_up_picture {
+    position: absolute;
+    bottom: 0;
+    right: 45px;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/thumbs_up.png);
+    background-position: -150px 0;
+}
+
+.thumbs_up_count {
+    position: absolute;
+    bottom: 0;
+    right: 75px;
+    font-size: 14px;
+    line-height: 1.2em;
+}
+
+.delete_comment {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 110px;
+    font-size: 15px;
+}
+
+.paging_block {
+    margin: 20px auto;
+    height: 50px;
+    width: 500px;
+}
+
+.paging_block li {
+    cursor: pointer;
+    float: left;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 50%;
+    margin: 0 10px;
+    line-height: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.prev_page_btn {
+    transform: rotate(180deg);
+}
+
+.paging_block .first_page {
+    background-color: orange;
+    color: white;
+}

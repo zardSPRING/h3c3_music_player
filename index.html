@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+</head>
+
+<body>
+    <div class="nav_block">
+        <div class="nav">
+            <div class="nav_logo"><img src="./images/logo.jpg" alt="酷狗音乐"></div>
+            <ul class="nav_bar">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">榜单</a></li>
+                <li><a href="#">歌手</a></li>
+                <li><a href="#">下载酷我客户端</a></li>
+            </ul>
+            <ul class="nav_service_bar">
+                <li>
+                    <span></span><a href="#">美女秀</a>
+                </li>
+                <li>
+                    <span></span><a href="#">酷我耳机</a>
+                </li>
+                <li>
+                    <span></span><a href="#">VIP会员</a>
+                </li>
+                <li>
+                    <span></span><a href="#">i听</a>
+                </li>
+                <li>
+                    <a href="#">更多服务</a>
+                </li>
+                <li>
+                    <a href="#">登录</a>
+                </li>
+                <li><a href="#">﹥</a></li>
+            </ul>
+            <div class="nav_search">
+                <input type="search" name="" id="search_txt" placeholder="找到好音乐">
+            </div>
+        </div>
+    </div>
+    <div class="main_block">
+        <div class="lyric_block">
+            <div class="song_title_block">
+                <h2>喜羊羊</h2>
+                <div class="song_information">专辑：&nbsp;<span>儿童大全 </span>歌手：&nbsp;<span>华语群星 </span>分享 <span><i></i>评论</span></div>
+                <div class="song_upload">上传时间：2015-10-02 歌曲来源：民大相思湖网球社</div>
+            </div>
+            <ul class="lyric_words_block">
+                <li>白云因为我变得柔软</li>
+                <li>别看我只是一只羊</li>
+                <li>样儿的聪明难以想象</li>
+                <li>天再高心情一样奔放</li>
+                <li>有什么难题区 去牵绊我 都不会去心伤</li>
+                <li>有什么危险 在我面前 也不会去慌乱</li>
+                <li>就算有狼群 把我追捕 也当做游戏一场</li>
+                <li>在什么时间 都爱开心 笑容都会飞翔</li>
+                <li>就算会摔倒 站了起来 永远不会沮丧</li>
+                <li>在所有天气 拥有叫人 大笑的力量</li>
+                <li>虽然我只是羊</li>
+                <li>喜羊羊 美羊羊 懒羊羊 沸羊羊</li>
+                <li>慢羊羊 软绵绵 红太狼 灰太狼</li>
+                <li>wu da da</li>
+                <li>wu lu lu</li>
+                <li>wu wu lu lu</li>
+                <li>de li de</li>
+                <li>de da da</li>
+                <li>de de de de de de de</li>
+                <div class="words_process"></div>
+            </ul>
+        </div>
+        <div class="disc_play_block">
+            <div class="disc_block">
+                <div class="disc_outer">
+                    <div class="disc_bg">
+                        <div class="disc_inside"></div>
+                        <div class="disc_inner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="music_play_block">
+                <div class="prev_btn music_btn">
+                    <audio controls="controls" id="music_audio">
+                        <source src="./media/1.别看我只是一只羊.mp3"  type="audio/mp3" id="source">
+                    </audio>
+                </div>
+                <div class="play_btn music_btn"></div>
+                <div class="next_btn music_btn"></div>
+                <div class="prograssContent">
+                    <div class="prograssBar">
+                        <span class="prograssLine"></span>
+                        <div class="prograssDot"></div>
+                    </div>
+                </div>
+                <div class="music_current_time">00:00</div>
+                <div class="mute_btn music_btn"></div>
+                <div class="mode_btn music_btn"></div>
+            </div>
+            <div class="download_btn"><span></span> Download
+            </div>
+            <div class="user_nowTitle_block">
+                <div class="user_profile_picture"></div>
+                <div class="username_title_block">
+                    <h4>王健宇——H5班</h4>
+                    <h4><span></span> 喜羊羊与灰太狼
+                        <a href="#">去现场 ></a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comment_outer_block">
+        <div class="comment_block">
+            <h4>评论 &nbsp;&nbsp;<span id="comment_counts">1703条评论</span></h4>
+            <div class="comment_user_picture"></div>
+            <div class="comment_right_block">
+                <textarea name="user_comment_textarea" id="user_comment_textarea" placeholder="分享你的音乐见解"></textarea>
+                <div class="emoji_submit_btn_block">
+                    <span class="comment_emoji"></span>
+                    <span class="comment_words">已输入 0个字</span>
+                    <button type="submit" id="comment_submit_btn">评论</button>
+                </div>
+            </div>
+            <p class="great_comments_title">精彩评论</p>
+            <ul class="great_comments_block"></ul>
+        </div>
+        <ul class="paging_block">
+            <li class="prev_page_btn">＞</li>
+            <li class="first_page">1</li>
+            <li class="second_page">2</li>
+            <li class="third_page">3</li>
+            <li class="ellipsis_page">···</li>
+            <li class="last_page"></li>
+            <li class="next_page_btn">＞</li>
+        </ul>
+    </div>
+</body>
+
+</html>
