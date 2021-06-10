@@ -636,6 +636,12 @@ window.addEventListener('DOMContentLoaded', function() {
         readCommentDatas();
     })
 
-
+    lastPage.addEventListener("click", function() {
+        firstPage.innerHTML = lastPage.innerHTML;
+        secondPage.innerHTML = lastPage.innerHTML;
+        thirdPage.innerHTML = lastPage.innerHTML;
+        greatCommentsBlock.innerHTML = "";
+        readCommentDatas();
+    })
 
 })
