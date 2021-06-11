@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
-    var lyricWordsBlock = document.querySelector(".lyric_words_block");
-    var wordsProcess = document.querySelector(".words_process");
     var playBtn = document.querySelector(".play_btn");
+    var disOuter = document.querySelector(".disc_outer");
     var musicAudio = document.querySelector("#music_audio");
     var muteBtn = document.querySelector(".mute_btn");
     var musicCurrentTime = document.querySelector(".music_current_time");
@@ -56,6 +55,7 @@ window.addEventListener('DOMContentLoaded', function() {
         if (musicAudio.paused) {
             musicAudio.play();
             playBtn.style.backgroundPosition = "-179px -194px";
+            disOuter.style.animation = "discRotate linear 10s infinite";
             timer = setInterval(function(e) {
                 nowTime();
                 var currentTimePercent = musicAudio.currentTime / musicAudio.duration;
@@ -64,6 +64,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }, 500)
         } else {
             musicAudio.pause();
+            disOuter.style.animation = "";
             clearInterval(timer);
             playBtn.style.backgroundPosition = "-137px -153px";
         }
@@ -612,6 +613,7 @@ window.addEventListener('DOMContentLoaded', function() {
         greatCommentsBlock.innerHTML = "";
         readCommentDatas();
     })
+
     nextPageBtn.addEventListener("click", function() {
         if (Number(firstPage.innerHTML) < Number(lastPage.innerHTML)) {
             firstPage.innerHTML = Number(firstPage.innerHTML) + 1;
@@ -626,14 +628,6 @@ window.addEventListener('DOMContentLoaded', function() {
             greatCommentsBlock.innerHTML = "";
             readCommentDatas();
         }
-    })
-
-    lastPage.addEventListener("click", function() {
-        firstPage.innerHTML = lastPage.innerHTML;
-        secondPage.innerHTML = lastPage.innerHTML;
-        thirdPage.innerHTML = lastPage.innerHTML;
-        greatCommentsBlock.innerHTML = "";
-        readCommentDatas();
     })
 
     lastPage.addEventListener("click", function() {
