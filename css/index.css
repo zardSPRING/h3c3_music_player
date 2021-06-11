@@ -230,7 +230,6 @@ li {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid #ccc;
-    animation: discRotate linear 10s infinite;
 }
 
 @keyframes discRotate {
@@ -711,4 +710,8 @@ li {
 .paging_block .first_page {
     background-color: orange;
     color: white;
+}
+
+.paging_block .ellipsis_page {
+    background-color: transparent;
 }
