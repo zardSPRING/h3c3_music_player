@@ -472,17 +472,16 @@ window.addEventListener('DOMContentLoaded', function() {
         if (!window.localStorage) {
             alert("请更换支持localstorage的浏览器！");
         } else {
-            if (localStorage.getItem("commentsDatasStr") === null) {
-                console.log(localStorage.getItem("commentsDatasStr") === null);
-                var commentsDatasStr = JSON.stringify(commentDatas);
-                localStorage.setItem("commentsDatasStr", commentsDatasStr);
+            if (localStorage.getItem("commentDataStr") === null) {
+                var commentDataStr = JSON.stringify(commentDatas);
+                localStorage.setItem("commentDataStr", commentDataStr);
             }
         }
     }
 
     function readCommentDatas() {
 
-        var json = localStorage.getItem("commentsDatasStr");
+        var json = localStorage.getItem("commentDataStr");
         var commentsDatasObj = JSON.parse(json);
         for (var i = 3 * Number(firstPage.innerHTML) - 3; i <= 3 * Number(firstPage.innerHTML) - 1 && i < commentsDatasObj.length; i++) {
 
@@ -566,11 +565,11 @@ window.addEventListener('DOMContentLoaded', function() {
                 commentTime: hostCommentTime,
                 thumbsUpCount: 0
             }
-            var json = localStorage.getItem("commentsDatasStr");
+            var json = localStorage.getItem("commentDataStr");
             var commentsDatasObj = JSON.parse(json);
             commentsDatasObj.unshift(hostObj);
             json = JSON.stringify(commentsDatasObj);
-            localStorage["commentsDatasStr"] = json;
+            localStorage["commentDataStr"] = json;
             greatCommentsBlock.innerHTML = "";
             readCommentDatas();
         }
